@@ -53,6 +53,9 @@ import java.util.List;
 
 @Config
 public final class MecanumDrive {
+    public MecanumDrive(DcMotor frontLeft, DcMotor frontRight, DcMotor backLeft, DcMotor backRight) {
+    }
+
     public static class Params {
         // IMU orientation
         // TODO: fill in these values based on
