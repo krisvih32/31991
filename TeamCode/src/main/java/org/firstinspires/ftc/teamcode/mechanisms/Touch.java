@@ -15,7 +15,7 @@ public class Touch extends LinearOpMode {
 
         while (opModeIsActive()) {
             if (touch.isPressed()) {
-                telemetry.addData("PRESSED", 1);
+                telemetry.addData("PRESSzED", 1);
             } else {
                 telemetry.addData("PRESSED", 0);
             }

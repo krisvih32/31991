@@ -18,29 +18,29 @@ public class Telemetry extends LinearOpMode {
         telemetry = new MultipleTelemetry(telemetry, FtcDashboard.getInstance().getTelemetry());
 
         try {
-            motor1 = hardwareMap.get(DcMotor.class, "backLeftMotor");
+            motor1 = hardwareMap.get(DcMotor.class, "motor1");
         } catch (Exception e) {
             telemetry.addData("Error", "motor failed");
             telemetry.update();
             motor1 = null;
             while (true){}
         }
-//        try {
-//            touch1 = hardwareMap.get(DigitalChannel.class, "digitalTouch");
-//        } catch (Exception e) {
-//            telemetry.addData("Error", "touch failed");
-//            telemetry.update();
-//        }
+        try {
+            touch1 = hardwareMap.get(DigitalChannel.class, "digitalTouch");
+        } catch (Exception e) {
+            telemetry.addData("Error", "touch failed");
+            telemetry.update();
+        }
         waitForStart();
         telemetry.addData("TELEMETRY", 1);
         telemetry.update();
         // Do not exit
         while (opModeIsActive()) {
-//            if (touch1.getState()) {
+            if (touch1.getState()) {
                 motor1.setPower(1);
-//            } else {
-//                motor1.setPower(0);
-//            }
+            } else {
+                motor1.setPower(0);
+            }
         }
     }
 }
