@@ -40,5 +40,9 @@ dependencies {
     implementation "com.acmerobotics.roadrunner:core:1.0.1"
     implementation "com.acmerobotics.roadrunner:actions:1.0.1"
     implementation "com.acmerobotics.dashboard:dashboard:0.4.17"
-    implementation 'org.firstinspires.ftc:RobotCore:10.3.0'
+    implementation ('org.firstinspires.ftc:RobotCore:10.3.0') {
+        exclude group: 'com.google.code.gson', module: 'gson'
+    }
+    implementation 'com.google.android.libraries.ads.mobile.sdk:ads-mobile-sdk:0.19.0-beta01'
 }
+

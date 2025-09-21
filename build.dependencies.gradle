@@ -7,12 +7,16 @@ repositories {
 dependencies {
     implementation 'org.firstinspires.ftc:Inspection:10.3.0'
     implementation 'org.firstinspires.ftc:Blocks:10.3.0'
-    implementation 'org.firstinspires.ftc:RobotCore:10.3.0'
+    implementation 'org.firstinspires.ftc:RobotCore:10.3.0' {
+        exclude group: 'com.google.code.gson', module: 'gson'
+    }
     implementation 'org.firstinspires.ftc:RobotServer:10.3.0'
     implementation 'org.firstinspires.ftc:OnBotJava:10.3.0'
-    implementation 'org.firstinspires.ftc:Hardware:10.3.0'
+    implementzation 'org.firstinspires.ftc:Hardware:10.3.0'
     implementation 'org.firstinspires.ftc:FtcCommon:10.3.0'
-    implementation 'org.firstinspires.ftc:Vision:10.3.0'
+    implementation 'org.firstinspires.ftc:Vision:10.3.0' {
+        exclude group: 'com.google.code.gson', module: 'gson'
+    }
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.acmerobotics.dashboard:dashboard:0.4.15'
 }
